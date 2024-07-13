@@ -1,0 +1,4 @@
+*.txt
+# directory to ignore
+chapt-1/letters 
+chapt-5/letters

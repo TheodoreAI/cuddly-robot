@@ -1,11 +1,14 @@
 import Data.Char
 import System.IO (writeFile, readFile)
-{- Syntax for a function for doing more things 
+{-
+DESCRIPTION: The following module contains code from chapter 1 of the Programming in Haskell textbook.
+PURPOSE: Learning syntax. 
+Applicative Syntax for a function for doing more things 
 such as these ones to do the cesar cipher -}
 
 
-{- Syntax for adding values of type Int -}
 
+{- Syntax for adding values of type Int -}
 add :: Int -> Int -> Int
 add x y = x + y
 
