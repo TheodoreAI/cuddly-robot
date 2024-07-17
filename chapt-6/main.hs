@@ -53,7 +53,29 @@ insertionSort [] = [] -- base case
 insertionSort (x:xs) = insert x (insertionSort xs) -- recursive case
 
 
+-- Examples of recursion using the 5 steps
+
+-- 1. define a type
+-- 2. Enumerate the cases
+-- 3. Define the simple cases
+-- 4. Define the other cases
+-- 5. Generalize and simplify
+
+dropIt :: Int -> [a] -> [a]
+dropIt 0 [] = [] -- base case
+dropIt 0 (x:xs) = x:xs -- base case
+dropIt _ [] = [] -- base case
+dropIt n (_:xs) = dropIt (n-1) xs -- recursive case
+
+
+popEnd :: [a] -> [a] -- define the type
+popEnd [] = [] -- base case
+popEnd [_] = [] -- base case
+popEnd (x:xs) = x : popEnd xs -- recursive case
+
+
 main :: IO ()
 main = do 
     print $ insertionSort [3, 2, 1, 4, 5] -- [1, 2, 3, 4, 5]
 
+    print $ dropIt 3 [1, 2, 3, 4, 5] -- [4, 5]
