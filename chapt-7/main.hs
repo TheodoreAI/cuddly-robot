@@ -8,7 +8,7 @@ suma = \x -> (\y -> x + y) -- only as an example, we can use the normal way
 
 
 -- 7.2 Higher order functions - functions that take other functions as arguments or return functions as results
-dosVeces :: (a -> a ) -> a -> a -- this function takes a function and a value and applies the function twice to the value
+dosVeces :: (a -> a) -> a -> a -- this function takes a function and a value and applies the function twice to the value
 dosVeces f x = f (f x) -- this is a higher order function
 
 -- lets do one that applies the function 3 times
@@ -42,4 +42,5 @@ filtros p (x:xs) | p x = x : filtros p xs -- recursive case
 -- prime
 prime :: Int -> Bool
 prime n = n > 1 && and [n `mod` x /= 0 | x <- [2..n-1]]
-                
+
+
